@@ -19,7 +19,12 @@
             <artifactId>guice</artifactId>
             <version>7.0.0</version> <!-- Check for the latest version on Maven Central -->
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 

@@ -10,7 +10,11 @@ public class Main {
 
         Application application = injector.getInstance(Application.class);
 
-        application.start();
+        try {
+            application.start();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("\n\nAll done for now...");
     }
 
