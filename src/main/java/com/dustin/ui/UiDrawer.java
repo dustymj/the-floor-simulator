@@ -1,6 +1,8 @@
 package com.dustin.ui;
 
+import com.dustin.data.TheFloor;
+
 public interface UiDrawer {
 
-    void drawUI ();
+    String getUI(TheFloor theFloor);
 }
