@@ -1,10 +1,12 @@
 package com.dustin.data;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.Random;
 
 @Data
+@Builder
 public class Strategy {
 
     // Percent chance that they will attack a space adjacent to them
