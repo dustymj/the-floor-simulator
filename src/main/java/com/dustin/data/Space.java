@@ -1,19 +1,15 @@
 package com.dustin.data;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 public class Space {
-    boolean occupied;
-    String ownerId;
+    int row;
+    int column;
+    Player player;
 
-    public String toString() {
-        if (occupied) {
-            return "[x]";
-        } else {
-            return "[ ]";
-        }
+    public Space(int row, int column) {
+        this.row = row;
+        this.column = column;
     }
 }
