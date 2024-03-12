@@ -11,16 +11,19 @@ public class TheFloor {
 
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
-                theFloor[row][column] = createSpace();
+                theFloor[row][column] = createSpace(row, column);
             }
         }
 
         this.theFloor = theFloor;
     }
 
-    private Space createSpace() {
-        Space space = new Space();
-        // TODO Get new player here, with associated datas.
+    private Space createSpace(int row, int column) {
+        Space space = new Space(row, column);
+        Player player = new Player(space, 50);
+
+        space.setPlayer(player);
+
         return space;
     }
 }

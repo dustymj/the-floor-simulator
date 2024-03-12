@@ -1,8 +1,11 @@
 package com.dustin;
 
 import com.dustin.data.TheFloor;
+import com.dustin.ui.TheFloorUI;
 import com.dustin.ui.UiDrawer;
 import com.google.inject.Inject;
+
+import javax.swing.*;
 
 public class Application {
     private final UiDrawer uiDrawer;
@@ -15,7 +18,8 @@ public class Application {
     public void start() throws InterruptedException {
         TheFloor theFloor = new TheFloor();
 
-        String ui = uiDrawer.getUI(theFloor);
-        System.out.print(ui);
+        SwingUtilities.invokeLater(() -> {
+            new TheFloorUI(theFloor).setVisible(true);
+        });
     }
 }
